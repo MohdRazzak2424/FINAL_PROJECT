@@ -1,7 +1,7 @@
 # **volume control using hand gesture recognition python**
 For the [Final Project of CS50x 2022](https://cs50.harvard.edu/x/2022/) of the Harvard-provided CS50 course, I developed this simple Python volume control using hand gesture recognition  .
 
-### **Video Demo:** www.youtube.com
+##**Video Demo:** www.youtube.com
 
 
 ## CREATED by:
