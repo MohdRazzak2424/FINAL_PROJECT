@@ -1,8 +1,9 @@
+
 from colorsys import rgb_to_hls, rgb_to_hsv, rgb_to_yiq
 from ctypes import POINTER, cast
 from ctypes.wintypes import RGB
 from math import hypot
-                         '''DO NOT COPY CODE - MOHD RAZZAK'''
+
 import cv2
 import mediapipe as mp
 import numpy as np
@@ -55,4 +56,38 @@ while True:
         # image #fingers #radius #rgb
         cv2.circle(img, (point_x1, point_x1), 13, (255, 0, 0), cv2.FILLED)
         # image #fingers #radius #rgb
-              
+        cv2.circle(img, (point_x2, point_y2), 13, (255, 0, 0), cv2.FILLED)
+        # create a line b/w tips of index finger and thumb
+        cv2.line(img, (point_x1, point_y1),
+                 (point_x2, point_y2), (255, 0, 0), 3)
+
+        # distance b/w tips using hypotenuse
+        length = hypot(point_x2-point_x1, point_y2-point_y1)
+        # from numpy we find our length,by converting hand range in terms of volume range ie b/w -63.5 to 0
+        vol_xy = np.interp(length, [15, 220], [volMin, volMax])
+        volbar_y = np.interp(length, [30, 350], [400, 150])
+        volper_int = np.interp(length, [30, 350], [0, 100])
+
+        print(vol_xy, int(length))
+        volume.SetMasterVolumeLevel(vol_xy, None)
+
+        # Hand range 30 - 350
+        # Volume range -63.5 - 0.0
+        # creating volume bar for volume level
+        # vid ,initial position ,ending position ,rgb ,thickness
+        cv2.rectangle(img, (50, 150), (85, 400), (3, 232, 252), 4)
+        cv2.rectangle(img, (50, int(volbar_y)), (85, 400),
+                      (11, 252, 3), cv2.FILLED)
+        cv2.putText(img, f"MOHD RAZZAK CS50X project ", (10, 60),
+                    cv2.FONT_ITALIC, 1, (255, 0, 0), 2)
+        cv2.putText(img, f"Volume percentage :- {int(volper_int)}%", (40, 135),
+                    cv2.FONT_ITALIC, 1, (14, 47, 235), 3)
+
+        # tell the volume percentage ,location,font of text,length,rgb color,thickness
+    # Show the video
+    cv2.imshow('CS50X PROJECT VOLUME CONTROL DETECTION BY HUMAN HANDS ', img)
+    if cv2.waitKey(1) & 0xff == ord(' '):  # By using spacebar delay will stop
+        break
+
+captures.release()  # stop cam
+cv2.destroyAllWindows()  # close window
