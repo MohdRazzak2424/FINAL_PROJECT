@@ -1,14 +1,14 @@
 # **volume control using hand gesture recognition python**
 For the [Final Project of CS50x 2022](https://cs50.harvard.edu/x/2022/) of the Harvard-provided CS50 course, I developed this simple Python volume control using hand gesture recognition  .
 
-##**Video Demo:** www.youtube.com
+## **Video Demo:** www.youtube.com
 
 
 ## CREATED by:
 
 **MOHD RAZZAK**
 
-### Description:
+## Description:
 
 Interaction with the computer is one of the important challenges that the elderly and disabled people face in today's computer world. In recent years, hand gesture recognition has emerged as one of the most natural human-machine interactions in software development, especially to facilitate friendly and flexible human-computer interaction. This paper proposes a system architecture and software configuration to develop a real-time voice-controlled hand gesture on a Raspberry Pi equipped with a camera programmed in Python using the Open-Source Computer Vision (OpenCV) library. The main purpose of the hand gesture recognition system is to communicate between humans and computer systems in order to control voice. According to the experimental results, the hand movement detection system performs well when controlling the voice. This system is able to work in real-time for any individual.
 
