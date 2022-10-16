@@ -1,6 +1,3 @@
-# FINAL_PROJECT
-
-
 # **volume control using hand gesture recognition python**
 For the [Final Project of CS50](https://cs50.harvard.edu/x/2022/) of the Harvard-provided CS50 course, I developed this simple Python search engine.
 
@@ -8,7 +5,7 @@ For the [Final Project of CS50](https://cs50.harvard.edu/x/2022/) of the Harvard
 
 ## CREATED by:
 
-- ***MOHD RAZZAK***
+**MOHD RAZZAK**
 
 ## Description:
 
@@ -66,6 +63,9 @@ __Here we are trying to process a video so that we can control the volume of the
 - Run the command  `pip install ctype`
 
 -  After  all the dependancies and Requirement have been installed, run the command `python Main.py`
+
+
+
 
 
 
