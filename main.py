@@ -2,7 +2,7 @@ from colorsys import rgb_to_hls, rgb_to_hsv, rgb_to_yiq
 from ctypes import POINTER, cast
 from ctypes.wintypes import RGB
 from math import hypot
-
+                         '''DO NOT COPY CODE - MOHD RAZZAK'''
 import cv2
 import mediapipe as mp
 import numpy as np
